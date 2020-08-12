@@ -17,6 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.18.0'
-    - run: node index.js $DiscordToken
+    - run: |
+            node index.js $DToken
       env:
-        DiscordToken: ${{ secrets.DiscordToken }}
+        DToken: ${{ secrets.DiscordToken }}
