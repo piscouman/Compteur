@@ -93,7 +93,7 @@ client.on('message', (message) => {
         .addField('\u200B','remove')
         .addField('\u200B','classement')
         .addField('\u200B','clear')
-        .setTimestamp()
+        .setTimestamp();
         message.reply(mes);
 });
 
