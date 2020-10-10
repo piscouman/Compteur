@@ -79,12 +79,22 @@ client.on('message', (message) => {
         } else { message.reply("Le classement est vide")}
     }
 
-    if (command === `clear` | toRemove){
+    else if (command === `clear` | toRemove){
         if(message.member.hasPermission('MANAGE_MESSAGES')) {
             delete client.vars[message.guild.id];
             message.reply('Classement effacé');
         } else {message.reply('Vous n\'avez pas la permission')};  
     }
+    else if (command === `help`){
+        mes = new Discord.MessageEmbed()
+        .setColor('#fda134')
+        .setTitle('Commande :')
+        .addField('\u200B','add')
+        .addField('\u200B','remove')
+        .addField('\u200B','classement')
+        .addField('\u200B','clear')
+        .setTimestamp()
+        message.reply(mes);
 })
 
 client.login(token);
