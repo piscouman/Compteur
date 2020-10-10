@@ -95,6 +95,7 @@ client.on('message', (message) => {
         .addField('\u200B','clear')
         .setTimestamp();
         message.reply(mes);
+    }
 });
 
 client.login(token);
