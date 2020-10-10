@@ -15,6 +15,12 @@ client.on('message', (message) => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     var toRemove = false;
+    
+    if (command === `stopbot` && (message.member.id == `360100919276339201` || message.member.id == `171691629219020800`)){ // piscou / fire
+        message.delete();
+        client.destroy();
+        return;
+    }
 
     if (command === `add`){
         if(message.member.hasPermission('MANAGE_MESSAGES')) {
