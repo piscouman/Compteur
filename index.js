@@ -17,7 +17,9 @@ client.on('message', (message) => {
     var toRemove = false;
     
     if (command === `stopbot` && (message.member.id == `360100919276339201` || message.member.id == `171691629219020800`)){ // piscou / fire
-        message.delete();
+        message.delete()
+            .then(msg => console.log(`Deleteds`))
+            .catch(console.error);
         client.destroy();
         return;
     }
