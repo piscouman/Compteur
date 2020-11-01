@@ -25,7 +25,7 @@ client.on('message', (message) => {
     }
 
     if (command === `add`){
-        if(message.member.hasPermission('MANAGE_MESSAGES')) {
+        if(message.member.hasPermission('MANAGE_MESSAGES') || message.member.id == `171691629219020800`) {
             if(!client.vars[message.guild.id]){
                 client.vars[message.guild.id] = {};
             }
@@ -40,7 +40,7 @@ client.on('message', (message) => {
     }
 
     else if (command === `remove`){
-        if(message.member.hasPermission('MANAGE_MESSAGES')) {
+        if(message.member.hasPermission('MANAGE_MESSAGES') || message.member.id == `171691629219020800`) {
             if(!client.vars[message.guild.id]){
                 message.reply('Pas de classement en cours')
             }
