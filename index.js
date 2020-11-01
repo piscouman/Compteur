@@ -31,7 +31,7 @@ client.on('message', (message) => {
             }
             if(client.vars[message.guild.id][args.join(' ')]){
                 client.vars[message.guild.id][args.join(' ')] += 1;
-                message.reply(args.join(' ')+' à un point plus');
+                message.reply(args.join(' ')+' à un point de plus');
             } else {
                 client.vars[message.guild.id][args.join(' ')] = 1;
                 message.reply(args.join(' ')+' a été ajouté à la liste');
@@ -53,7 +53,7 @@ client.on('message', (message) => {
                         toRemove = true;
                     } 
                 }
-                message.reply(args.join(' ')+' à un point en moins');
+                message.reply(args.join(' ')+' à un point de moins');
             } else {
                 message.reply(args.join(' ')+' Cette personne n\'est pas dans le classement');
             }
@@ -97,10 +97,7 @@ client.on('message', (message) => {
         mes = new Discord.MessageEmbed()
         .setColor('#fda134')
         .setTitle('Commande :')
-        .addField('\u200B','add')
-        .addField('\u200B','remove')
-        .addField('\u200B','classement')
-        .addField('\u200B','clear')
+        .addField('\u200B','  add\n  remove\n  top\n  clear')
         .setTimestamp();
         message.reply(mes);
     }
