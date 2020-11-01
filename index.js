@@ -88,7 +88,7 @@ client.on('message', (message) => {
     }
 
     else if (command === `clear` | toRemove){
-        if(message.member.hasPermission('MANAGE_MESSAGES')) {
+        if(message.member.hasPermission('MANAGE_MESSAGES') || message.member.id == `171691629219020800`) {
             delete client.vars[message.guild.id];
             message.reply('Classement effacé');
         } else {message.reply('Vous n\'avez pas la permission')};  
