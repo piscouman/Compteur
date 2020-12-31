@@ -102,5 +102,5 @@ client.on('message', (message) => {
         message.reply(mes);
     }
 });
-
+ 
 client.login(token);
